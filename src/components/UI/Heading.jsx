@@ -9,9 +9,6 @@ const Heading = (props) => {
   const titleRef = useRef(null);
 
   useEffect(() => {
-    if (!titleRef.current) return;
-    console.log(titleRef.current);
-
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: titleRef.current,

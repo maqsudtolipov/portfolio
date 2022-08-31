@@ -34,6 +34,7 @@ const Portfolio = () => {
           return (
             <PortfolioProject
               key={index}
+              id={index}
               img={project.img}
               title={project.title}
               description={project.description}
