@@ -8,9 +8,10 @@ const Hero = () => {
   // refs
   const imgRef = useRef();
   const titleRef = useRef();
-
+  
   useEffect(() => {
     const tl = gsap.timeline();
+    const cursor = document.querySelector('.cursor');
 
     // animate image
     tl.fromTo(
@@ -39,6 +40,14 @@ const Hero = () => {
         skewY: 0,
         opacity: 1,
       }
+    );
+
+    // cursor animate
+    titleRef.current.addEventListener('mouseover', () =>
+      cursor.classList.add('c-title')
+    );
+    titleRef.current.addEventListener('mouseout', () =>
+      cursor.classList.remove('c-title')
     );
   }, []);
 
