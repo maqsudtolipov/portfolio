@@ -30,13 +30,14 @@ const Hero = () => {
     tl.fromTo(
       titleRef.current,
       {
+        y: '50%',
+        skewY: 10,
         opacity: 0,
-        y: '10%',
       },
       {
-        duration: 1,
-        opacity: 1,
         y: '0%',
+        skewY: 0,
+        opacity: 1,
       }
     );
   }, []);
@@ -49,7 +50,7 @@ const Hero = () => {
           <span className='underline'>Available</span> for freeance &
           collaborations.
         </h1>
-        <img ref={imgRef} className='hero-img' src={heroImg} />
+        <img ref={imgRef} className='hero-img' src={heroImg} alt='' />
       </div>
     </div>
   );
