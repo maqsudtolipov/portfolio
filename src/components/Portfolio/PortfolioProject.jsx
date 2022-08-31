@@ -14,7 +14,6 @@ const PortfolioProject = (props) => {
     imgRef.current.addEventListener('mouseover', () => {
       cursor.innerHTML = 'View project';
       cursor.classList.add('c-project');
-
     });
     imgRef.current.addEventListener('mouseout', () => {
       cursor.innerHTML = '';
@@ -24,8 +23,14 @@ const PortfolioProject = (props) => {
 
   return (
     <div className='portfolio-project'>
-      <p>{props.title}</p>
-      <img ref={imgRef} className='portfolio-project__img' src={props.img} alt='' />
+      <img
+        ref={imgRef}
+        className='portfolio-project__img'
+        src={props.img}
+        alt=''
+      />{' '}
+      <h2>{props.title}</h2>
+      <p>{props.description}</p>
     </div>
   );
 };

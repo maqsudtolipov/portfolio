@@ -3,6 +3,7 @@
     width: 100%;
     height: 40rem;
     transition: transform 0.2s;
+    margin-bottom: 1.8rem;
 
     &:hover {
       transform: scale(0.95);
@@ -10,8 +11,20 @@
     }
   }
 
-  p {
+  h2 {
     font-size: 3rem;
-    margin-bottom: 1.8rem;
+    font-weight: bold;
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #979797;
+  }
+}
+
+.portfolio-project:nth-child(2n) {
+  .portfolio-project__img {
+    height: 30rem;
   }
 }
