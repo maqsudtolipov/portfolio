@@ -1,7 +1,11 @@
-import './Heading.scss'
+import './Heading.scss';
 
 const Heading = (props) => {
-  return <h2 className='heading'>{props.children}</h2>;
+  return (
+    <div className='heading'>
+      <p className='heading-title'>{props.children}</p>
+    </div>
+  );
 };
 
 export default Heading;
