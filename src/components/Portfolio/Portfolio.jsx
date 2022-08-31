@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: 'Music Player App',
-    img: 'https://images.unsplash.com/photo-1634118931958-f1cf1f9c6156?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80',
+    img: 'https://images.unsplash.com/photo-1653592328269-09c14b3628f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
     description: 'Front end',
   },
 ];
