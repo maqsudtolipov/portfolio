@@ -29,8 +29,10 @@ const PortfolioProject = (props) => {
         src={props.img}
         alt=''
       />{' '}
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
+      <div className='portfolio-project__content'>
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>{' '}
+      </div>
     </div>
   );
 };
