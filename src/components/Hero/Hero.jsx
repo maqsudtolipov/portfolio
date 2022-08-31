@@ -8,7 +8,7 @@ const Hero = () => {
   // refs
   const imgRef = useRef();
   const titleRef = useRef();
-
+  
   useEffect(() => {
     const tl = gsap.timeline();
     const cursor = document.querySelector('.cursor');

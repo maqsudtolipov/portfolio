@@ -4,27 +4,28 @@
   align-items: center;
 
   &-container {
+    max-width: 120rem;
     margin: 0 auto;
-    padding: 0 4rem;
+    padding: 0 2rem;
     position: relative;
   }
 
   &-title {
-    font-size: 7.4rem;
+    font-size: 5.8rem;
     font-weight: 700;
     // line-height: 1.2;
     margin-bottom: 1rem;
-    // max-width: 80rem;
-    margin-right: 30rem;
+    max-width: 80rem;
+    margin-right: 20rem;
   }
 
   &-img {
     // height: 100%;
     position: absolute;
-    width: 60rem;
+    width: 40rem;
     top: 50%;
-    // transform: translateY(-50%);
-    right: 4rem;
+    transform: translateY(-50%);
+    right: 0;
     z-index: -1;
   }
 }
