@@ -55,11 +55,10 @@ const PortfolioProject = (props) => {
     const tlIn = gsap.timeline({
       scrollTrigger: {
         trigger: imgInRef.current,
-        toggleActions: 'play none none none',
+        toggleActions: 'play none reverse none',
         start: 'top bottom-=200px',
         end: 'bottom top+=100px',
         scrub: true,
-        markers: true,
       },
     });
 
