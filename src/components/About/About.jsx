@@ -1,3 +1,4 @@
+import Accordion from '../UI/Accordion';
 import Heading from '../UI/Heading';
 import P from '../UI/P';
 
@@ -26,6 +27,7 @@ const About = () => {
 
         <div>
           <P>Your one stop shop for:</P>
+          <Accordion></Accordion>
         </div>
       </div>
     </div>
