@@ -4,7 +4,7 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #979797;
     cursor: pointer;
   }
 
@@ -35,22 +35,20 @@
   }
 
   &-content {
-    // display: none;
     max-height: 0;
     overflow: hidden;
     transition: all 0.6s;
 
     p {
+      color: #979797;
       font-family: 'Roboto', sans-serif;
       font-size: 2rem;
       padding: 1rem 2rem;
-      
     }
   }
 }
 
 .active {
-
   .accordion-icon {
     transform: rotate(-180deg);
   }
