@@ -17,7 +17,7 @@ const PortfolioProject = (props) => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: imgRef.current,
-        toggleActions: 'restart reverse restart reset',
+        toggleActions: 'play none none none',
         start: 'top bottom-=100px',
         end: 'bottom top+=100px',
         markers: true,
@@ -31,7 +31,7 @@ const PortfolioProject = (props) => {
         {
           x: -100,
           duration: 1,
-          opacity: 0,
+          opacity: 0.5,
         },
         {
           x: 0,
