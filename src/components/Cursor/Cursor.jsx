@@ -10,7 +10,7 @@ const Cursor = () => {
   useEffect(() => {
     document.addEventListener('mousemove', (e) => {
       gsap.to(cursorRef.current, {
-        duration: 1,
+        duration: 0.3,
         left: e.clientX,
         top: e.clientY,
       });
