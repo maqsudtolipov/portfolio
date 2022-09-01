@@ -35,6 +35,9 @@ const Heading = (props) => {
       <p ref={titleRef} className='heading-title'>
         {props.children}
       </p>
+      <div className='heading-line'>
+        <div className='heading-line__in'></div>
+      </div>
     </div>
   );
 };
