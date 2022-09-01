@@ -1,3 +1,8 @@
-.underline {
-  text-decoration: underline;
+.highlight {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: url(./assets/gold2.jpg);
+  background-size: cover;
+  text-shadow: 0 0 10px #f8bf4c, 0 0 40px #f8bf4c, 0 0 80px #f8bf4c;
 }
