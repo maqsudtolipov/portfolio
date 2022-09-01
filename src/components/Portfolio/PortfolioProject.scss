@@ -53,6 +53,10 @@
     color: #0c4a6e4d;
     line-height: 1;
     z-index: -1;
+
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: url(../../assets/gold2.jpg);
   }
 }
 

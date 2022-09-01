@@ -15,6 +15,9 @@
   background-color: #fff;
   border: none;
   mix-blend-mode: difference;
+  background-image: url(../../assets/gold2.jpg);
+  background-size: cover;
+  z-index: -1;
 }
 
 .c-project {
@@ -30,6 +33,8 @@
   height: 10rem;
   border: none;
   transition: height 0.2s, width 0.2s;
+  background-image: url(../../assets/gold2.jpg);
+  background-size: cover;
 }
 
 .c-acc {
@@ -37,4 +42,6 @@
   background-color: #0ea5e9;
   z-index: -1;
   transform: translate(-50%, -50%) scale(3);
+  background-image: url(../../assets/gold2.jpg);
+  background-size: cover;
 }
