@@ -11,8 +11,6 @@ const PortfolioProject = (props) => {
 
   useEffect(() => {
     if (imgRef === null) return;
-
-    console.log(props.id);
     const cursor = document.querySelector('.cursor');
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -20,7 +18,7 @@ const PortfolioProject = (props) => {
         toggleActions: 'play none none none',
         start: 'top bottom-=100px',
         end: 'bottom top+=100px',
-        markers: true,
+        scrub: true,
       },
     });
     // anmate image
