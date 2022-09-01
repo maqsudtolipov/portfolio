@@ -3,6 +3,8 @@
   src: url(./assets/syne.bold.otf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *,
 *::after,
 *::before {
@@ -19,4 +21,15 @@ body {
   font-family: 'Syne', sans-serif;
   color: #fff;
   background-color: #0a0a0a;
+  background-image: url('../src/assets/bg.png');
+  animation: noise 0.1s infinite;
+}
+
+body::-webkit-scrollbar {
+  display: none; 
+}
+
+::selection {
+  background-color: #0ea5e9;
+  color: #0a0a0a;
 }

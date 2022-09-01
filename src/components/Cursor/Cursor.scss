@@ -16,3 +16,18 @@
   border: none;
   mix-blend-mode: difference;
 }
+
+.c-project {
+  color: #0a0a0a;
+  background-color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 10rem;
+  height: 10rem;
+  border: none;
+  transition: height 0.2s, width 0.2s;
+}
