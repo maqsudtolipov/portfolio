@@ -9,6 +9,9 @@ const PortfolioProject = (props) => {
   // refs
   const imgRef = useRef(null);
   const imgInRef = useRef(null);
+  const titleRef = useRef(null);
+  const numRef = useRef(null);
+  const desRef = useRef(null);
 
   useEffect(() => {
     if (imgRef === null) return;
@@ -23,33 +26,18 @@ const PortfolioProject = (props) => {
     });
     // anmate image
 
-    if (props.id % 2 === 0) {
-      tl.fromTo(
-        imgRef.current,
-        {
-          x: -100,
-          duration: 1,
-          opacity: 0.5,
-        },
-        {
-          x: 0,
-          opacity: 1,
-        }
-      );
-    } else {
-      tl.fromTo(
-        imgRef.current,
-        {
-          x: 100,
-          duration: 1,
-          opacity: 0,
-        },
-        {
-          x: 0,
-          opacity: 1,
-        }
-      );
-    }
+    tl.fromTo(
+      imgRef.current,
+      {
+        x: props.id % 2 === 0 ? '-20%' : '20%',
+        opacity: 0,
+        duration: 2,
+      },
+      {
+        x: 0,
+        opacity: 1,
+      }
+    );
 
     // parralax effect on img
     const tlIn = gsap.timeline({
@@ -77,6 +65,43 @@ const PortfolioProject = (props) => {
       }
     );
 
+    // animate texts
+    const tlTitle = gsap.timeline({
+      scrollTrigger: {
+        trigger: titleRef.current,
+        toggleActions: 'play none none none',
+        start: 'top bottom-=100px',
+        end: 'bottom top+=100px',
+      },
+    });
+
+    tlTitle
+      .fromTo(
+        titleRef.current,
+        {
+          x: props.id % 2 === 0 ? '-50%' : '50%',
+          opacity: 0,
+          letterSpacing: '2rem',
+          duration: 1,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          letterSpacing: '0',
+        }
+      )
+      .fromTo(
+        desRef.current,
+        {
+          opacity: 0,
+          y: '-50%',
+        },
+        {
+          opacity: 1,
+          y: '0%',
+        }
+      );
+
     // animate cursor
     imgRef.current.addEventListener('mouseover', () => {
       cursor.innerHTML = 'View project';
@@ -95,8 +120,8 @@ const PortfolioProject = (props) => {
       </div>
 
       <div className='portfolio-project__content'>
-        <h2>{props.title}</h2>
-        <p>{props.description}</p>{' '}
+        <h2 ref={titleRef}>{props.title}</h2>
+        <p ref={desRef}>{props.description}</p>{' '}
       </div>
     </div>
   );
