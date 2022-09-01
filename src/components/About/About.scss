@@ -1,0 +1,14 @@
+.about {
+  height: 100vh;
+
+  &-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+    margin-bottom: 10rem;
+  }
+
+  &-text {
+
+  }
+}

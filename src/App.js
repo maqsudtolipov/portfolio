@@ -13,7 +13,9 @@ function App() {
       <Container>
         <Portfolio />
       </Container>
-      <About />
+      <Container>
+        <About />
+      </Container>
       <Cursor />
     </div>
   );
