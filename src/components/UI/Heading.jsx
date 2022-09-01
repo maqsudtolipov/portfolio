@@ -16,7 +16,6 @@ const Heading = (props) => {
         toggleActions: 'play none none none',
         start: 'bottom bottom-=200px',
         end: 'bottom top+=100px',
-        markers: true,
         scrub: true,
       },
     });
@@ -31,11 +30,6 @@ const Heading = (props) => {
       {
         x: 0,
         opacity: 1,
-        scrollTrigger: {
-          trigger: lineRef.current,
-          toggleActions: 'play none none none',
-          start: 'top bottom-=100px',
-        },
       }
     );
 
@@ -43,6 +37,11 @@ const Heading = (props) => {
     tlL.fromTo(
       lineRef.current,
       {
+        scrollTrigger: {
+          trigger: lineRef.current,
+          toggleActions: 'play none none none',
+          start: 'top bottom-=100px',
+        },
         width: '0%',
       },
       {
