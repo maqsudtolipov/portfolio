@@ -4,10 +4,18 @@
   height: 36px;
   border-radius: 50%;
   border: 2px solid #f8bf4c;
-  transition: background-color 0.1s;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: transform 0.5s;
+}
+
+.cursor-inner {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid #f8bf4c;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .c-title {
