@@ -4,6 +4,27 @@ import P from '../UI/P';
 
 import './About.scss';
 
+const accordionData = [
+  {
+    id: 1,
+    title: 'Frontend',
+    content:
+      'I build websites and web apps. I love to create beautiful and functional websites that are user-friendly and easy to use. I also love to create beautiful and functional websites that are user-friendly and easy to use.',
+  },
+  {
+    id: 2,
+    title: 'Backend',
+    content:
+      'I build websites and web apps. I love to create beautiful and functional websites that are user-friendly and easy to use. I also love to create beautiful and functional websites that are user-friendly and easy to use.',
+  },
+  {
+    id: 3,
+    title: 'Design',
+    content:
+      'I build websites and web apps. I love to create beautiful and functional websites that are user-friendly and easy to use. I also love to create beautiful and functional websites that are user-friendly and easy to use.',
+  },
+];
+
 const About = () => {
   return (
     <div>
@@ -27,7 +48,14 @@ const About = () => {
 
         <div>
           <P>Your one stop shop for:</P>
-          <Accordion></Accordion>
+          {accordionData.map((item, index) => (
+            <Accordion
+              key={index}
+              id={item.id}
+              title={item.title}
+              content={item.content}
+            />
+          ))}
         </div>
       </div>
     </div>
