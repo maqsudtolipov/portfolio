@@ -7,25 +7,45 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Heading = (props) => {
   const titleRef = useRef(null);
+  const lineRef = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({
+    const tlL = gsap.timeline({
       scrollTrigger: {
-        trigger: titleRef.current,
-        start: 'center bottom-=100px',
-        markers: true,
+        trigger: lineRef.current,
+        toggleActions: 'play none none none',
+        start: 'bottom bottom-=200px',
+        end: 'bottom top+=100px',
+        scrub: true,
       },
     });
-    tl.fromTo(
+
+    // text
+    gsap.fromTo(
       titleRef.current,
       {
-        y: 100,
-        duration: 1000,
+        x: 100,
         opacity: 0,
       },
       {
-        y: 0,
+        x: 0,
         opacity: 1,
+      }
+    );
+
+    // line
+    tlL.fromTo(
+      lineRef.current,
+      {
+        scrollTrigger: {
+          trigger: lineRef.current,
+          toggleActions: 'play none none none',
+          start: 'top bottom-=100px',
+        },
+        width: '0%',
+      },
+      {
+        width: '100%',
       }
     );
   }, []);
@@ -35,6 +55,9 @@ const Heading = (props) => {
       <p ref={titleRef} className='heading-title'>
         {props.children}
       </p>
+      <div className='heading-line'>
+        <div ref={lineRef} className='heading-line__in'></div>
+      </div>
     </div>
   );
 };

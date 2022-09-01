@@ -56,7 +56,7 @@ const Hero = () => {
       <div className='hero-container'>
         <h1 ref={titleRef} className='hero-title'>
           I'm Maqsud, a MERN stack developer based in Tashkent.{' '}
-          <span className='underline'>Available</span> for freeance &
+          <span className='highlight'>Available</span> for freeance &
           collaborations.
         </h1>
         <img ref={imgRef} className='hero-img' src={heroImg} alt='' />

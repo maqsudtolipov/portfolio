@@ -3,7 +3,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 2px solid rgb(90, 90, 90);
+  border: 2px solid #f8bf4c;
   transition: background-color 0.1s;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -11,10 +11,13 @@
 }
 
 .c-title {
-  transform: scale(4);
+  transform: translate(-50%, -50%) scale(4);
   background-color: #fff;
   border: none;
   mix-blend-mode: difference;
+  background-image: url(../../assets/gold2.jpg);
+  background-size: cover;
+  z-index: -1;
 }
 
 .c-project {
@@ -30,4 +33,15 @@
   height: 10rem;
   border: none;
   transition: height 0.2s, width 0.2s;
+  background-image: url(../../assets/gold2.jpg);
+  background-size: cover;
+}
+
+.c-acc {
+  border: none;
+  background-color: #0ea5e9;
+  z-index: -1;
+  transform: translate(-50%, -50%) scale(3);
+  background-image: url(../../assets/gold2.jpg);
+  background-size: cover;
 }

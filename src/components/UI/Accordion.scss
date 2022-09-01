@@ -1,0 +1,59 @@
+.accordion {
+  &-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #979797;
+    cursor: pointer;
+  }
+
+  &-num {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Plat Nomor', sans-serif;
+    font-size: 2rem;
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+  }
+
+  &-title {
+    font-size: 3rem;
+  }
+
+  &-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease-in-out;
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.6s;
+
+    p {
+      color: #979797;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+.active {
+  .accordion-icon {
+    transform: rotate(-180deg);
+  }
+
+  .accordion-content {
+    max-height: 20rem;
+  }
+}

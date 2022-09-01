@@ -8,11 +8,10 @@ gsap.registerPlugin(ScrollTrigger);
 const PortfolioProject = (props) => {
   // refs
   const imgRef = useRef(null);
+  const imgInRef = useRef(null);
 
   useEffect(() => {
     if (imgRef === null) return;
-
-    console.log(props.id);
     const cursor = document.querySelector('.cursor');
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -20,7 +19,6 @@ const PortfolioProject = (props) => {
         toggleActions: 'play none none none',
         start: 'top bottom-=100px',
         end: 'bottom top+=100px',
-        markers: true,
       },
     });
     // anmate image
@@ -53,6 +51,32 @@ const PortfolioProject = (props) => {
       );
     }
 
+    // parralax effect on img
+    const tlIn = gsap.timeline({
+      scrollTrigger: {
+        trigger: imgInRef.current,
+        toggleActions: 'play none reverse none',
+        start: 'top bottom-=200px',
+        end: 'bottom top+=100px',
+        scrub: true,
+      },
+    });
+
+    tlIn.fromTo(
+      imgInRef.current,
+      {
+        scrollTrigger: {
+          trigger: imgInRef.current,
+          toggleActions: 'play none none none',
+          start: 'top bottom-=100px',
+        },
+        scale: 1,
+      },
+      {
+        scale: 1.1,
+      }
+    );
+
     // animate cursor
     imgRef.current.addEventListener('mouseover', () => {
       cursor.innerHTML = 'View project';
@@ -66,12 +90,10 @@ const PortfolioProject = (props) => {
 
   return (
     <div className='portfolio-project'>
-      <img
-        ref={imgRef}
-        className='portfolio-project__img'
-        src={props.img}
-        alt=''
-      />{' '}
+      <div className='portfolio-project__img' ref={imgRef}>
+        <img ref={imgInRef} src={props.img} alt='' />
+      </div>
+
       <div className='portfolio-project__content'>
         <h2>{props.title}</h2>
         <p>{props.description}</p>{' '}
