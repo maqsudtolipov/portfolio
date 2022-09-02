@@ -1,9 +1,9 @@
 .marquee {
   position: relative;
-  // overflow: hidden;
+  overflow: hidden;
   height: 50px;
-  width: 120vw;
-  transform: translateX(-20%);
+  width: 200%;
+  transform: translateX(-200px);
 
   &-item {
     width: 200px;
