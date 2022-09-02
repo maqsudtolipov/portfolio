@@ -13,6 +13,10 @@ import Contact from './components/Contact/Contact';
 function App() {
   useEffect(() => {
     const tl = gsap.timeline({});
+    const buttons = document.querySelectorAll('button');
+    const inputs = document.querySelectorAll('input');
+    const textareas = document.querySelectorAll('textarea');
+    const cursor = document.querySelector('.cursor');
 
     tl.to('.first', {
       height: 0,
@@ -42,6 +46,33 @@ function App() {
       },
       '<50%'
     );
+
+    console.log(buttons);
+
+    buttons.forEach((button) => {
+      button.addEventListener('mouseover', () =>
+        cursor.classList.add('c-none')
+      );
+      button.addEventListener('mouseout', () =>
+        cursor.classList.remove('c-none')
+      );
+    });
+
+    inputs.forEach((input) => {
+      input.addEventListener('mouseover', () => cursor.classList.add('c-none'));
+      input.addEventListener('mouseout', () =>
+        cursor.classList.remove('c-none')
+      );
+    });
+
+    textareas.forEach((textarea) => {
+      textarea.addEventListener('mouseover', () =>
+        cursor.classList.add('c-none')
+      );
+      textarea.addEventListener('mouseout', () =>
+        cursor.classList.remove('c-none')
+      );
+    });
   }, []);
 
   return (
