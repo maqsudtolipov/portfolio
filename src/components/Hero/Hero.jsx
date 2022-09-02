@@ -8,9 +8,11 @@ const Hero = () => {
   // refs
   const imgRef = useRef();
   const titleRef = useRef();
-  
+
   useEffect(() => {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({
+      delay: 1.5,
+    });
     const cursor = document.querySelector('.cursor');
 
     // animate image
@@ -39,7 +41,8 @@ const Hero = () => {
         y: '0%',
         skewY: 0,
         opacity: 1,
-      }
+      }, 
+      '<50%'
     );
 
     // cursor animate
