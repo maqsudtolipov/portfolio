@@ -1,0 +1,141 @@
+.contact-section {
+  margin-bottom: 10rem;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+}
+
+.form {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  label {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  input,
+  textarea {
+    font-family: inherit;
+    font-size: 2rem;
+    color: #999;
+    background-color: #1b1b1b;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  textarea {
+    height: 10rem;
+  }
+
+  input:focus,
+  textarea:focus {
+    color: #ccc;
+  }
+}
+
+// test button
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
+  background: $bcolor;
+  mask: url($url);
+  mask-size: $x1 $y1;
+  border: $bor;
+  color: $col;
+}
+
+.button-container {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  overflow: hidden;
+  border: 2px solid #f8bf4c;
+  transition: 0.5s;
+
+  button {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+
+    @include button(
+      url(../../assets/gold2.jpg),
+      'https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png',
+      3000%,
+      100%,
+      none,
+      #0a0a0a
+    );
+    cursor: pointer;
+    animation: ani 0.7s steps(29) forwards;
+
+    &:hover {
+      animation: ani2 0.7s steps(29) forwards;
+    }
+  }
+}
+
+.mas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f8bf4c;
+  width: 100%;
+  font-size: 2rem;
+  overflow: hidden;
+}
+
+@-webkit-keyframes ani {
+  from {
+    mask-position: 0 0;
+  }
+
+  to {
+    mask-position: 100% 0;
+  }
+}
+
+@keyframes ani {
+  from {
+    mask-position: 0 0;
+  }
+
+  to {
+    mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    mask-position: 100% 0;
+  }
+
+  to {
+    mask-position: 0 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    mask-position: 100% 0;
+  }
+
+  to {
+    mask-position: 0 0;
+  }
+}

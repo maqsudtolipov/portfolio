@@ -18,6 +18,16 @@
   pointer-events: none;
 }
 
+.c-none {
+  height: 0;
+  width: 0;
+  border: 0;
+}
+
+.c-none ~ .cursor-inner {
+  display: none;
+}
+
 .c-title {
   transform: translate(-50%, -50%) scale(4);
   background-color: #fff;
