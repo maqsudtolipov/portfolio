@@ -12,11 +12,14 @@
   position: fixed;
   left: 0;
   top: 0;
-  background-color: rgb(41, 41, 41);
+  background-color: #f8bf4c;
   height: 100vh;
   width: 25vw;
   z-index: 1000;
-  border-right: 3px solid #f8bf4c;
+  border-right: 5px solid #0a0a0a;
+  background-image: url(./assets/gold2.jpg);
+  background-size: cover;
+  background-position: top;
 }
 
 .second {
