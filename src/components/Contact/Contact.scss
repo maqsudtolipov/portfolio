@@ -1,0 +1,64 @@
+.contact-section {
+  margin-bottom: 10rem;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+}
+
+.form {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  label {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  input,
+  textarea {
+    font-family: inherit;
+    font-size: 2rem;
+    background-color: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  button {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: transparent;
+    color: #f8bf4c;
+    border: 2px solid #f8bf4c;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  button:hover {
+    color: #0a0a0a;
+  }
+
+  button::before {
+    content: '';
+    background-color: #f8bf4c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  button:hover::before {
+    height: 100%;
+  }
+}

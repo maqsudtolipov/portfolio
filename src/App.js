@@ -8,6 +8,7 @@ import Cursor from './components/Cursor/Cursor';
 import Portfolio from './components/Portfolio/Portfolio';
 import Container from './components/UI/Container';
 import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 
 function App() {
   useEffect(() => {
@@ -51,6 +52,9 @@ function App() {
       </Container>
       <Container>
         <About />
+      </Container>
+      <Container>
+        <Contact />
       </Container>
       <Cursor />
 
