@@ -11,24 +11,36 @@ import About from './components/About/About';
 
 function App() {
   useEffect(() => {
-    gsap.to('.first', {
-      height: 0,
-    });
+    const tl = gsap.timeline({});
 
-    gsap.to('.second', {
-      height: 0,
-      delay: 0.25,
-    });
-
-    gsap.to('.third', {
+    tl.to('.first', {
       height: 0,
       delay: 0.5,
     });
 
-    gsap.to('.fourth', {
-      height: 0,
-      delay: 0.75,
-    });
+    tl.to(
+      '.second',
+      {
+        height: 0,
+      },
+      '<50%'
+    );
+
+    tl.to(
+      '.third',
+      {
+        height: 0,
+      },
+      '<50%'
+    );
+
+    tl.to(
+      '.fourth',
+      {
+        height: 0,
+      },
+      '<50%'
+    );
   }, []);
 
   return (
