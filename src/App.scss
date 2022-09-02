@@ -6,3 +6,27 @@
   background-size: cover;
   text-shadow: 0 0 10px #f8bf4c, 0 0 40px #f8bf4c, 0 0 80px #f8bf4c;
 }
+
+// loading animation
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgb(41, 41, 41);
+  height: 100vh;
+  width: 25vw;
+  z-index: 1000;
+  border-right: 3px solid #f8bf4c;
+}
+
+.second {
+  left: 25%;
+}
+
+.third {
+  left: 50%;
+}
+
+.fourth {
+  left: 75%;
+}
