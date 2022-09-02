@@ -56,9 +56,43 @@
 
 .c-mar {
   border: none;
-  background-color: #0ea5e9;
+  mix-blend-mode: difference;
   z-index: -1;
   transform: translate(-50%, -50%) scale(3);
-  background-image: url(../../assets/marquee-gold.jpg);
   background-size: cover;
+}
+
+.html {
+  background-color: #e34c26;
+}
+
+.css {
+  background-color: #264de4;
+}
+.sass {
+  background-color: #c76494;
+}
+
+.javascript {
+  background-color: #f7df1e;
+}
+
+.react {
+  background-color: #61dafb;
+}
+
+.node {
+  background-color: #3c873a;
+}
+
+.express {
+  background-color: #000000;
+}
+
+.mongodb {
+  background-color: #47a248;
+}
+
+.mongoose {
+  background-color: #bb1b28;
 }

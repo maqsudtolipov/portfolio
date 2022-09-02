@@ -58,7 +58,11 @@ const Marquee = () => {
   return (
     <div className='marquee'>
       {skills.map((skill, index) => (
-        <MarqueeItem key={index} skill={skill} />
+        <MarqueeItem
+          key={index}
+          skill={skill}
+          class={skill.toLocaleLowerCase()}
+        />
       ))}
     </div>
   );

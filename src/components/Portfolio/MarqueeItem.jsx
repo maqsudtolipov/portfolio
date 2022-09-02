@@ -9,9 +9,11 @@ const MarqueeItem = (props) => {
     // animate cursor
     marRef.current.addEventListener('mouseover', () => {
       cursor.classList.add('c-mar');
+      cursor.classList.add(props.class);
     });
     marRef.current.addEventListener('mouseout', () => {
       cursor.classList.remove('c-mar');
+      cursor.classList.remove(props.class);
     });
   }, []);
   return (
