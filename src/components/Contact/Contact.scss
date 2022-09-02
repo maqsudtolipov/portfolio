@@ -41,37 +41,6 @@
   textarea:focus {
     color: #ccc;
   }
-
-  button {
-    position: relative;
-    font-size: 2rem;
-    font-weight: 500;
-    background-color: transparent;
-    color: #f8bf4c;
-    border: 2px solid #f8bf4c;
-    padding: 1rem;
-    transition: all 0.3s ease-in-out;
-  }
-
-  button:hover {
-    color: #0a0a0a;
-  }
-
-  button::before {
-    content: '';
-    background-color: #f8bf4c;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    z-index: -1;
-    transition: all 0.3s ease-in-out;
-  }
-
-  button:hover::before {
-    height: 100%;
-  }
 }
 
 // test button
@@ -81,139 +50,92 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
-@import url('https://fonts.googleapis.com/css?family=Roboto:100');
-
 @mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
   background: $bcolor;
-  -webkit-mask: url($url);
   mask: url($url);
-  -webkit-mask-size: $x1 $y1;
   mask-size: $x1 $y1;
   border: $bor;
   color: $col;
 }
 
-.header {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 34px;
-  margin-top: 12vh;
-}
-
-.footer {
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  margin-top: 15vh;
-}
-
-.button-container-2 {
+.button-container {
   position: relative;
-  width: 100px;
+  width: 200px;
   height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 7vh;
   overflow: hidden;
-  border: 1px solid #000;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  border: 2px solid #f8bf4c;
   transition: 0.5s;
-  letter-spacing: 1px;
-  border-radius: 8px;
 
   button {
-    width: 101%;
+    width: 100%;
     height: 100%;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 11px;
-    letter-spacing: 1px;
-    font-weight: bold;
+    font-size: 2rem;
 
     @include button(
-      #000,
+      url(../../assets/gold2.jpg),
       'https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png',
       3000%,
       100%,
       none,
-      #fff
+      #0a0a0a
     );
     cursor: pointer;
-    -webkit-animation: ani2 0.7s steps(29) forwards;
-    animation: ani2 0.7s steps(29) forwards;
+    animation: ani 0.7s steps(29) forwards;
 
     &:hover {
-      -webkit-animation: ani 0.7s steps(29) forwards;
-      animation: ani 0.7s steps(29) forwards;
+      animation: ani2 0.7s steps(29) forwards;
     }
   }
 }
 
 .mas {
   position: absolute;
-  color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  width: 101%;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  position: absolute;
-  font-size: 11px;
-  margin-top: 17px;
+  color: #f8bf4c;
+  width: 100%;
+  font-size: 2rem;
   overflow: hidden;
-  font-weight: bold;
 }
 
 @-webkit-keyframes ani {
   from {
-    -webkit-mask-position: 0 0;
     mask-position: 0 0;
   }
 
   to {
-    -webkit-mask-position: 100% 0;
     mask-position: 100% 0;
   }
 }
 
 @keyframes ani {
   from {
-    -webkit-mask-position: 0 0;
     mask-position: 0 0;
   }
 
   to {
-    -webkit-mask-position: 100% 0;
     mask-position: 100% 0;
   }
 }
 
 @-webkit-keyframes ani2 {
   from {
-    -webkit-mask-position: 100% 0;
     mask-position: 100% 0;
   }
 
   to {
-    -webkit-mask-position: 0 0;
     mask-position: 0 0;
   }
 }
 
 @keyframes ani2 {
   from {
-    -webkit-mask-position: 100% 0;
     mask-position: 100% 0;
   }
 
   to {
-    -webkit-mask-position: 0 0;
     mask-position: 0 0;
   }
-}
-
-a {
-  color: #00ff95;
 }
