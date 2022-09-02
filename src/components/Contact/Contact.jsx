@@ -1,9 +1,13 @@
+import { useForm } from '@formspree/react';
+
 import Heading from '../UI/Heading';
 import P from '../UI/P';
 
 import './Contact.scss';
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm('meqnongr');
+
   return (
     <div className='contact-section'>
       <Heading>Contact</Heading>
@@ -20,28 +24,37 @@ const Contact = () => {
           </P>
         </div>
         <div className='contact-form'>
-          <form className='form'>
+          <form className='form' onSubmit={handleSubmit}>
             <div>
               <label htmlFor='name'>Name *</label>
               <input
                 type='text'
                 id='name'
-                placeholder='Kevin De Bruyne
-'
+                name='name'
+                placeholder='Kevin De Bruyne'
               />
             </div>
             <div>
               <label htmlFor='email'>Email *</label>
-              <input type='text' id='email' placeholder='example.com' />
+              <input
+                type='text'
+                id='email'
+                name='email'
+                placeholder='example@gmail.com'
+              />
             </div>
             <div>
               <label htmlFor='message'>Message *</label>
               <textarea
                 id='message'
+                name='message'
                 placeholder='How can I help you?'
               ></textarea>
+              {state.succeeded && <p>Thanks for your message!</p>}
             </div>
-            <button type='submit'>Send</button>
+            <button type='submit' disabled={state.submitting}>
+              Send
+            </button>
           </form>
         </div>
       </div>

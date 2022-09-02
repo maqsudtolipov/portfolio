@@ -24,11 +24,17 @@
   textarea {
     font-family: inherit;
     font-size: 2rem;
+    color: #fff;
     background-color: transparent;
     border: 2px solid #fff;
     outline: none;
     padding: 1rem;
     width: 100%;
+  }
+
+  input:focus,
+  textarea:focus {
+    color: #fff;
   }
 
   button {
