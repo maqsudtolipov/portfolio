@@ -1,9 +1,9 @@
 .portfolio {
-  margin-bottom: 3.2rem;
+  margin-bottom: 10rem;
 
   &-projects {
     display: grid;
-    grid-template-columns:  1fr;
+    grid-template-columns: 1fr;
     grid-gap: 16rem;
   }
 }

@@ -28,7 +28,7 @@ const accordionData = [
 
 const About = () => {
   return (
-    <div>
+    <div className='section-about'>
       <Heading>About Me</Heading>
       <div className='about-content'>
         <div className='about-text'>
