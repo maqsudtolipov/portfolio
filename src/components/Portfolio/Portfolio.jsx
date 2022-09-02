@@ -1,4 +1,5 @@
 import Heading from '../UI/Heading';
+import Marquee from './Marquee';
 import './Portfolio.scss';
 import PortfolioProject from './PortfolioProject';
 
