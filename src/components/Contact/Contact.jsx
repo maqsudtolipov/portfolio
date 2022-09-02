@@ -55,7 +55,7 @@ const Contact = () => {
               {state.succeeded && <p>Thanks for your message!</p>}
             </div>
             <button type='submit' disabled={state.submitting}>
-              Send
+              Send Message
             </button>
           </form>
         </div>

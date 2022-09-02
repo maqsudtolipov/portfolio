@@ -18,23 +18,28 @@
     display: block;
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: #fff;
   }
 
   input,
   textarea {
     font-family: inherit;
     font-size: 2rem;
-    color: #fff;
-    background-color: transparent;
-    border: 2px solid #fff;
+    color: #999;
+    background-color: #1b1b1b;
+    border: none;
     outline: none;
     padding: 1rem;
     width: 100%;
   }
 
+  textarea {
+    height: 10rem;
+  }
+
   input:focus,
   textarea:focus {
-    color: #fff;
+    color: #ccc;
   }
 
   button {
