@@ -2,6 +2,7 @@ import { gsap } from 'gsap';
 import { useEffect } from 'react';
 
 import './Marquee.scss';
+import MarqueeItem from './MarqueeItem';
 
 const Marquee = () => {
   const skills = [
@@ -56,14 +57,9 @@ const Marquee = () => {
 
   return (
     <div className='marquee'>
-      {skills.map((skill, index) => {
-        return (
-          <div key={index} className='marquee-item'>
-            {skill}
-            <div className='marquee-item__dot'></div>
-          </div>
-        );
-      })}
+      {skills.map((skill, index) => (
+        <MarqueeItem key={index} skill={skill} />
+      ))}
     </div>
   );
 };
