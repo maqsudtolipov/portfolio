@@ -9,6 +9,7 @@ import Portfolio from './components/Portfolio/Portfolio';
 import Container from './components/UI/Container';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   useEffect(() => {
@@ -87,6 +88,7 @@ function App() {
       <Container>
         <Contact />
       </Container>
+      <Footer />
       <Cursor />
 
       {/* animation overlay */}
