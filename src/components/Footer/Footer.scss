@@ -1,5 +1,27 @@
 .footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #fff;
+  width: 100vw;
+  padding: 4rem 6rem;
+
+  font-size: 1.6rem;
+
   &-logo {
     height: 3.6rem;
+  }
+
+  &-text {
+    font-family: 'Roboto', sans-serif;
+    color: #aaa;
+  }
+
+  &-icons {
+    display: flex;
+    gap: 1.6rem
+  }
+
+  &-icon {
+    font-size: 2.4rem;
   }
 }
