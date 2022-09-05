@@ -11,13 +11,13 @@ const Footer = () => {
         reserved.
       </p>
       <div className='footer-icons'>
-        <a href='#'>
+        <a href='/'>
           <IoLogoGithub className='footer-icon' />
         </a>
-        <a href='#'>
+        <a href='/'>
           <IoLogoTwitter className='footer-icon' />
         </a>
-        <a href='#'>
+        <a href='/'>
           <IoLogoDiscord className='footer-icon' />
         </a>
       </div>
