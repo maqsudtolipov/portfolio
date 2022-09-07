@@ -34,7 +34,7 @@ const About = () => {
         <div className='about-text'>
           <P>
             I'm a product designer working on various projects on a wide range
-            of clients. My skillset lies on creating branding packages &
+            of clients. My skill set lies on creating branding packages &
             websites to deliver the full online experience for new and also
             veteran businesses.
           </P>

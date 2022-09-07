@@ -9,6 +9,7 @@ import Portfolio from './components/Portfolio/Portfolio';
 import Container from './components/UI/Container';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   useEffect(() => {
@@ -19,33 +20,40 @@ function App() {
     const cursor = document.querySelector('.cursor');
 
     tl.to('.first', {
-      height: 0,
+      width: 0,
       delay: 0.5,
     });
 
     tl.to(
       '.second',
       {
-        height: 0,
+        width: 0,
       },
-      '<50%'
+      '<0%'
     );
 
     tl.to(
       '.third',
       {
-        height: 0,
+        width: 0,
       },
-      '<50%'
+      '<0%'
     );
 
     tl.to(
       '.fourth',
       {
-        height: 0,
+        width: 0,
       },
-      '<50%'
+      '<0%'
     );
+
+    tl.to(
+        '.overlay',
+        {
+            border: '0px solid black',
+        }
+    )
 
     console.log(buttons);
 
@@ -87,6 +95,7 @@ function App() {
       <Container>
         <Contact />
       </Container>
+      <Footer />
       <Cursor />
 
       {/* animation overlay */}

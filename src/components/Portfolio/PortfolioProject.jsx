@@ -39,7 +39,7 @@ const PortfolioProject = (props) => {
       }
     );
 
-    // parralax effect on img
+    // parallax effect on img
     const tlIn = gsap.timeline({
       scrollTrigger: {
         trigger: imgInRef.current,

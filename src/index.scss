@@ -11,17 +11,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Syne', sans-serif;
   color: #fff;
   background-color: #0a0a0a;
-  background-image: url('../src/assets/bg.png');
   animation: noise 0.1s infinite;
   cursor: none;
 }
