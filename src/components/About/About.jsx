@@ -30,7 +30,6 @@ const About = () => {
   return (
     <div className='section-about'>
       <Heading>About Me</Heading>
-      <p>Hello my friend</p>
       <div className='about-content'>
         <div className='about-text'>
           <P>

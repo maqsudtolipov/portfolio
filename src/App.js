@@ -20,33 +20,40 @@ function App() {
     const cursor = document.querySelector('.cursor');
 
     tl.to('.first', {
-      height: 0,
+      width: 0,
       delay: 0.5,
     });
 
     tl.to(
       '.second',
       {
-        height: 0,
+        width: 0,
       },
-      '<50%'
+      '<0%'
     );
 
     tl.to(
       '.third',
       {
-        height: 0,
+        width: 0,
       },
-      '<50%'
+      '<0%'
     );
 
     tl.to(
       '.fourth',
       {
-        height: 0,
+        width: 0,
       },
-      '<50%'
+      '<0%'
     );
+
+    tl.to(
+        '.overlay',
+        {
+            border: '0px solid black',
+        }
+    )
 
     console.log(buttons);
 

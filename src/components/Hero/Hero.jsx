@@ -58,7 +58,7 @@ const Hero = () => {
     <div className='hero'>
       <div className='hero-container'>
         <h1 ref={titleRef} className='hero-title'>
-          I'm Maqsud, a MERN stack developer based in Tashkent.{' '}
+          I'm Maqsud, full stack developer based in Tashkent.{' '}
           <span className='highlight'>Available</span> for freeance &
           collaborations.
         </h1>
