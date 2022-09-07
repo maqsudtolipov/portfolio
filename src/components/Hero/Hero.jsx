@@ -58,9 +58,7 @@ const Hero = () => {
     <div className='hero'>
       <div className='hero-container'>
         <h1 ref={titleRef} className='hero-title'>
-          I'm Maqsud, full stack developer based in Tashkent.{' '}
-          <span className='highlight'>Available</span> for freeance &
-          collaborations.
+          FULL STACK DEV spends his days building tools that help make the Internet a better place for everyone 🌍
         </h1>
         <img ref={imgRef} className='hero-img' src={heroImg} alt='' />
       </div>
