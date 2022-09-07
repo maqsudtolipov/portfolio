@@ -37,10 +37,12 @@
 
 .back-text {
   font-size: 40rem;
-  color: #222;
+  //color: rgba(248, 191, 76, 0.2);
   position: absolute;
   display: flex;
   white-space: nowrap;
   z-index: -1000;
   bottom: 0;
+  -webkit-text-stroke: 10px #222222;
+  color: transparent;
 }
