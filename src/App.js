@@ -10,6 +10,7 @@ import Container from './components/UI/Container';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import Nav from './components/Nav/Nav'
 
 function App() {
   useEffect(() => {
@@ -85,6 +86,7 @@ function App() {
 
   return (
     <div className='App'>
+      <Nav />
       <Hero />
       <Container>
         <Portfolio />

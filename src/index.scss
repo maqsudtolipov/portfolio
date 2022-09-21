@@ -24,11 +24,11 @@ body {
   color: #fff;
   background-color: #0a0a0a;
   animation: noise 0.1s infinite;
-  cursor: none;
+  //cursor: none;
 }
 
 body::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 ::selection {
