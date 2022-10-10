@@ -42,7 +42,7 @@ const Hero = () => {
         y: '0%',
         skewY: 0,
         opacity: 1,
-      }, 
+      },
       '<50%'
     );
 
@@ -53,18 +53,18 @@ const Hero = () => {
         start: 'top bottom',
         end: 'bottom top',
         scrub: true,
-
       },
     });
 
     backTl.fromTo(
-        backRef.current,
-        {
-          left: '100%'
-        }, {
-          left: '-20%',
-        }
-    )
+      backRef.current,
+      {
+        left: '100%',
+      },
+      {
+        left: '-20%',
+      }
+    );
 
     // cursor animate
     titleRef.current.addEventListener('mouseover', () =>
@@ -80,12 +80,15 @@ const Hero = () => {
       <div className='hero-container'>
         <h1 ref={titleRef} className='hero-title'>
           <span className='hero-title-highlight'>FULL STACK DEV</span>&nbsp;
-          spends his days building tools that help make the Internet a better place for everyone
+          spends his days building tools that help make the Internet a better
+          place for everyone
         </h1>
         <img ref={imgRef} className='hero-img' src={heroImg} alt='' />
       </div>
 
-      <p ref={backRef} className='back-text'>FULL STACK FULL STACK FULL STACK FULL STACK FULL STACK</p>
+      <p ref={backRef} className='back-text'>
+        FULL STACK FULL STACK FULL STACK FULL STACK FULL STACK
+      </p>
     </div>
   );
 };
