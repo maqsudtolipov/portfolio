@@ -1,9 +1,11 @@
 import logo from '../../assets/logo.svg';
 import './Nav.scss';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 const Nav = () => {
+  const [open, setOpen] = useState(false);
+
   const shapeRef1 = useRef();
   const shapeRef2 = useRef();
   const shapeRef3 = useRef();
@@ -14,6 +16,10 @@ const Nav = () => {
   useEffect(() => {
     navTl.current = gsap.timeline({
       paused: true,
+    });
+
+    navTl.current.to('.nav-list', {
+      display: 'flex',
     });
 
     navTl.current.to(shapeRef1.current, {
@@ -79,19 +85,15 @@ const Nav = () => {
     );
   }, []);
 
-
   return (
     <>
       <div className='nav'>
         <img className='nav__logo' src={logo} alt='logo' />
-
-        <p onClick={animateLogo}>animate</p>
-        <p onClick={reverseLogo}>reverse</p>
         <span
           className='nav__btn'
           onClick={() => {
-            setOpen((value) => !value);
             navTl.current.play();
+            setOpen((open) => !open);
           }}
         >
           MENU
@@ -100,6 +102,7 @@ const Nav = () => {
         <p
           onClick={() => {
             navTl.current.reverse();
+            setOpen((open) => !open);
           }}
           className='z-top'
         >
@@ -112,7 +115,7 @@ const Nav = () => {
         <div ref={shapeRef4} className='nav__shape nav__shape-4'></div>
       </div>
 
-      <ul className={`nav-list`}>
+      <ul className='nav-list'>
         <li id='link-1'>
           <a className='nav-link' href='#a'>
             Home
