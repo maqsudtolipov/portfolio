@@ -1,117 +1,110 @@
 import logo from '../../assets/logo.svg';
 import './Nav.scss';
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 const Nav = () => {
-  const [open, setOpen] = useState(false);
-
   const shapeRef1 = useRef();
   const shapeRef2 = useRef();
   const shapeRef3 = useRef();
   const shapeRef4 = useRef();
 
-  // nav links
-  const linkRef1 = useRef();
+  const navTl = useRef(null);
 
-  // useEffect(() => {
-  //   const tl = gsap.timeline({});
-  //   console.log(linkRef1.current);
-  //   tl.to('link-1', {
-  //     left: '20rem',
-  //     delay: 1,
-  //     background: 'red',
-  //   });
-  // }, [open]);
-
-  // useEffect(() => {
-  //   const tl = gsap.timeline({});
-  //   console.log('enter')
-  //
-  //   if (open === true) {
-  //     console.log('shange')
-  //
-  //   tl.to(shapeRef.current, {
-  //     width: '25rem',
-  //   })
-  //   }
-  // }, [])
-
-  const animateMenu = () => {
-    const tl = gsap.timeline({});
-
-    tl.to(shapeRef1.current, {
-      width: open ? '0vw' : '25vw',
-      opacity: open ? 0 : 1,
+  useEffect(() => {
+    navTl.current = gsap.timeline({
+      paused: true,
     });
-    tl.to(
+
+    navTl.current.to(shapeRef1.current, {
+      width: '25vw',
+      opacity: 1,
+    });
+    navTl.current.to(
       shapeRef2.current,
       {
-        width: open ? '0vw' : '25vw',
-        opacity: open ? 0 : 1,
+        width: '25vw',
+        opacity: 1,
       },
       '<0%'
     );
-    tl.to(
+    navTl.current.to(
       shapeRef3.current,
       {
-        width: open ? '0vw' : '25vw',
-        opacity: open ? 0 : 1,
+        width: '25vw',
+        opacity: 1,
       },
       '<0%'
     );
-    tl.to(
+    navTl.current.to(
       shapeRef4.current,
       {
-        width: open ? '0vw' : '25vw',
-        opacity: open ? 0 : 1,
+        width: '25vw',
+        opacity: 1,
       },
       '<0%'
     );
 
-    tl.to(
+    navTl.current.to(
       '#link-1',
       {
         x: 0,
+        opacity: 1,
       },
       '<100%'
     );
-    tl.to(
+    navTl.current.to(
       '#link-2',
       {
         x: 0,
+        opacity: 1,
       },
       '<25%'
     );
-    tl.to(
+    navTl.current.to(
       '#link-3',
       {
         x: 0,
+        opacity: 1,
       },
       '<25%'
     );
-    tl.to(
+    navTl.current.to(
       '#link-4',
       {
         x: 0,
+        opacity: 1,
       },
       '<25%'
     );
-  };
+  }, []);
+
 
   return (
     <>
       <div className='nav'>
         <img className='nav__logo' src={logo} alt='logo' />
+
+        <p onClick={animateLogo}>animate</p>
+        <p onClick={reverseLogo}>reverse</p>
         <span
           className='nav__btn'
           onClick={() => {
             setOpen((value) => !value);
-            animateMenu();
+            navTl.current.play();
           }}
         >
           MENU
         </span>
+
+        <p
+          onClick={() => {
+            navTl.current.reverse();
+          }}
+          className='z-top'
+        >
+          CLOSE
+        </p>
 
         <div ref={shapeRef1} className='nav__shape nav__shape-1'></div>
         <div ref={shapeRef2} className='nav__shape nav__shape-2'></div>
@@ -119,7 +112,7 @@ const Nav = () => {
         <div ref={shapeRef4} className='nav__shape nav__shape-4'></div>
       </div>
 
-      <ul className={`nav-list ${!open && 'nav--closed'}`}>
+      <ul className={`nav-list`}>
         <li id='link-1'>
           <a className='nav-link' href='#a'>
             Home
