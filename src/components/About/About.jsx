@@ -48,7 +48,6 @@ const About = () => {
         </div>
 
         <div>
-          <P>Your one stop shop for:</P>
           {accordionData.map((item, index) => (
             <Accordion
               key={index}

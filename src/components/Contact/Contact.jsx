@@ -54,12 +54,10 @@ const Contact = () => {
               ></textarea>
               {state.succeeded && <p>Thanks for your message!</p>}
             </div>
-            <div class='button-container'>
-              <span class='mas'>Send Message</span>
-              <button type='submit' name='Hover' disabled={state.submitting}>
-                Send Message
-              </button>
-            </div>
+
+            <button className='button' type='submit' name='Hover' disabled={state.submitting}>
+              Send Message
+            </button>
           </form>
         </div>
       </div>
