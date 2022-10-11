@@ -85,28 +85,34 @@ const Nav = () => {
     );
   }, []);
 
+  console.log(open);
+
   return (
     <>
       <div className='nav'>
         <img className='nav__logo' src={logo} alt='logo' />
-        <span
-          className='nav__btn'
-          onClick={() => {
-            navTl.current.play();
-            setOpen((open) => !open);
-          }}
-        >
-          MENU
-        </span>
 
-        <p
-          onClick={() => {
-            navTl.current.reverse();
-            setOpen((open) => !open);
-          }}
-          className='z-top'
-        >
-          CLOSE
+        <p className='nav-btn'>
+          {open ? (
+            <span
+              onClick={() => {
+                navTl.current.reverse();
+                setOpen((open) => false);
+              }}
+            >
+              close
+            </span>
+          ) : (
+            <spa
+              className='nav__btn'
+              onClick={() => {
+                navTl.current.play();
+                setOpen((open) => true);
+              }}
+            >
+              open
+            </spa>
+          )}
         </p>
 
         <div ref={shapeRef1} className='nav__shape nav__shape-1'></div>
