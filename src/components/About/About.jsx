@@ -38,13 +38,6 @@ const About = () => {
             websites to deliver the full online experience for new and also
             veteran businesses.
           </P>
-          <br />
-          <P>
-            You can often find me creating videos about design over on YouTube,
-            or sharing my thoughts on my podcast, Dialogue With Designers . I'm
-            passionate about giving back and teaching what I know to the next
-            generation of designers.
-          </P>
         </div>
 
         <div>
