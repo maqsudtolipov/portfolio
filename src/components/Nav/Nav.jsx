@@ -1,7 +1,7 @@
-import logo from '../../assets/logo.svg';
-import './Nav.scss';
-import { useEffect, useRef, useState } from 'react';
-import gsap from 'gsap';
+import logo from "../../assets/logo.svg";
+import "./Nav.scss";
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -18,70 +18,70 @@ const Nav = () => {
       paused: true,
     });
 
-    navTl.current.to('.nav-list', {
-      display: 'flex',
+    navTl.current.to(".nav-list", {
+      display: "flex",
     });
 
     navTl.current.to(shapeRef1.current, {
-      width: '25vw',
+      width: "25vw",
       opacity: 1,
     });
     navTl.current.to(
       shapeRef2.current,
       {
-        width: '25vw',
+        width: "25vw",
         opacity: 1,
       },
-      '<0%'
+      "<0%"
     );
     navTl.current.to(
       shapeRef3.current,
       {
-        width: '25vw',
+        width: "25vw",
         opacity: 1,
       },
-      '<0%'
+      "<0%"
     );
     navTl.current.to(
       shapeRef4.current,
       {
-        width: '25vw',
+        width: "25vw",
         opacity: 1,
       },
-      '<0%'
+      "<0%"
     );
 
     navTl.current.to(
-      '#link-1',
+      "#link-1",
       {
         x: 0,
         opacity: 1,
       },
-      '<100%'
+      "<100%"
     );
     navTl.current.to(
-      '#link-2',
+      "#link-2",
       {
         x: 0,
         opacity: 1,
       },
-      '<25%'
+      "<25%"
     );
     navTl.current.to(
-      '#link-3',
+      "#link-3",
       {
         x: 0,
         opacity: 1,
       },
-      '<25%'
+      "<25%"
     );
     navTl.current.to(
-      '#link-4',
+      "#link-4",
       {
         x: 0,
         opacity: 1,
       },
-      '<25%'
+      "<25%"
     );
   }, []);
 
@@ -89,10 +89,10 @@ const Nav = () => {
 
   return (
     <>
-      <div className='nav'>
-        <img className='nav__logo' src={logo} alt='logo' />
+      <div className="nav">
+        <img className="nav__logo" src={logo} alt="logo" />
 
-        <p className='nav-btn'>
+        <p className="nav-btn">
           {open ? (
             <span
               onClick={() => {
@@ -103,44 +103,44 @@ const Nav = () => {
               close
             </span>
           ) : (
-            <spa
-              className='nav__btn'
+            <span
+              className="nav__btn"
               onClick={() => {
                 navTl.current.play();
                 setOpen((open) => true);
               }}
             >
               open
-            </spa>
+            </span>
           )}
         </p>
 
-        <div ref={shapeRef1} className='nav__shape nav__shape-1'></div>
-        <div ref={shapeRef2} className='nav__shape nav__shape-2'></div>
-        <div ref={shapeRef3} className='nav__shape nav__shape-3'></div>
-        <div ref={shapeRef4} className='nav__shape nav__shape-4'></div>
+        <div ref={shapeRef1} className="nav__shape nav__shape-1"></div>
+        <div ref={shapeRef2} className="nav__shape nav__shape-2"></div>
+        <div ref={shapeRef3} className="nav__shape nav__shape-3"></div>
+        <div ref={shapeRef4} className="nav__shape nav__shape-4"></div>
       </div>
 
-      <ul className='nav-list'>
-        <li id='link-1'>
-          <a className='nav-link' href='#a'>
+      <ul className="nav-list">
+        <li id="link-1">
+          <a className="nav-link" href="#a">
             Home
-          </a>{' '}
+          </a>{" "}
         </li>
-        <li id='link-2'>
-          <a className='nav-link' href='#a'>
+        <li id="link-2">
+          <a className="nav-link" href="#a">
             About
-          </a>{' '}
+          </a>{" "}
         </li>
-        <li id='link-3'>
-          <a className='nav-link' href='#a'>
+        <li id="link-3">
+          <a className="nav-link" href="#a">
             Portfolio
-          </a>{' '}
+          </a>{" "}
         </li>
-        <li id='link-4'>
-          <a className='nav-link' href='#a'>
+        <li id="link-4">
+          <a className="nav-link" href="#a">
             Contact
-          </a>{' '}
+          </a>{" "}
         </li>
       </ul>
     </>
