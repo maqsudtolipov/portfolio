@@ -20,8 +20,8 @@ const Contact = () => {
           <br />
           <P>
             If contact forms aren't your thing... send me an email at
-            <a href='mailto:someone@yoursite.com' className='underline'>
-              hello@arnau.design
+            <a href='mailto:maqsudtolipov9@gmail.com' className='underline'>
+              maqsudtolipov9@gmail.com
             </a>
           </P>
         </div>

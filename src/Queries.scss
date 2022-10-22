@@ -1,0 +1,13 @@
+// below 1344
+@media (max-width: 84em) {
+  .hero-container {
+    max-width: 120rem;
+  }
+}
+
+// below 1200
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}

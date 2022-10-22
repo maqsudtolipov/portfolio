@@ -3,10 +3,9 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   transform: translate(-50%, -50%);
   pointer-events: none;
-
 }
 
 .cursor-inner {
@@ -17,7 +16,6 @@
   background-color: #fff;
   transform: translate(-50%, -50%);
   pointer-events: none;
-
 }
 
 .c-none {
@@ -53,12 +51,11 @@
 
 .c-acc {
   border: none;
-  background-color: #0ea5e9;
   z-index: -1;
-  transform: translate(-50%, -50%) scale(2);
-  background-image: url(../../assets/gold2.jpg);
+  transform: translate(-50%, -50%) scale(3);
   background-size: cover;
   opacity: 0.5;
+  transition: transform 0.3s;
 }
 
 .c-mar {
@@ -67,6 +64,7 @@
   z-index: -1;
   transform: translate(-50%, -50%) scale(3);
   background-size: cover;
+  transition: transform 0.3s;
 }
 
 .html {

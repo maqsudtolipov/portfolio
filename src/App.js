@@ -3,6 +3,7 @@ import gsap from 'gsap';
 
 import logo from './logo.svg';
 import './App.scss';
+import './Queries.scss';
 import Hero from './components/Hero/Hero';
 import Cursor from './components/Cursor/Cursor';
 import Portfolio from './components/Portfolio/Portfolio';
@@ -10,7 +11,7 @@ import Container from './components/UI/Container';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
-import Nav from './components/Nav/Nav'
+import Nav from './components/Nav/Nav';
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
     const inputs = document.querySelectorAll('input');
     const textareas = document.querySelectorAll('textarea');
     const cursor = document.querySelector('.cursor');
+    const footerLinks = document.querySelectorAll('.footer-icon');
 
     tl.to('.first', {
       width: 0,
@@ -49,12 +51,9 @@ function App() {
       '<0%'
     );
 
-    tl.to(
-        '.overlay',
-        {
-            border: '0px solid black',
-        }
-    )
+    tl.to('.overlay', {
+      border: '0px solid black',
+    });
 
     console.log(buttons);
 
@@ -79,6 +78,13 @@ function App() {
         cursor.classList.add('c-none')
       );
       textarea.addEventListener('mouseout', () =>
+        cursor.classList.remove('c-none')
+      );
+    });
+
+    footerLinks.forEach((link) => {
+      link.addEventListener('mouseover', () => cursor.classList.add('c-none'));
+      link.addEventListener('mouseout', () =>
         cursor.classList.remove('c-none')
       );
     });
