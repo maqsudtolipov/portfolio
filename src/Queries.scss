@@ -3,6 +3,8 @@
   .hero-container {
     max-width: 120rem;
   }
+
+
 }
 
 // below 1200
@@ -10,9 +12,17 @@
   .hero-title {
     font-size: 5.4rem !important;
   }
+
+  .nav-list li {
+    font-size: 6.4rem !important;
+  }
 }
 
 @media (max-width: 59em) {
+  .nav-list li {
+    font-size: 5rem !important;
+  }
+
   .hero-title {
     font-size: 5rem !important;
     text-align: center;
