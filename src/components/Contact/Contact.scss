@@ -69,4 +69,10 @@
   font-weight: 600;
   align-self: flex-start;
   cursor: pointer;
+
+  &:hover {
+    background-color: #dfac44;
+    transition: 0.3s;
+  }
 }
+
