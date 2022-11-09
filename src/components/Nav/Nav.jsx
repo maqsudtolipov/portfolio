@@ -124,14 +124,14 @@ const Nav = () => {
 
       <ul className="nav-list">
         <li id="link-1">
-          <NavLink className="nav-link" to="aa">
+          <NavLink className="nav-link" to="/">
             Home
-          </NavLink>{" "}
+          </NavLink>
         </li>
         <li id="link-2">
-          <a className="nav-link" href="#a">
+          <NavLink className="nav-link" to="/aa">
             About
-          </a>{" "}
+          </NavLink>
         </li>
         <li id="link-3">
           <a className="nav-link" href="#a">
