@@ -1,6 +1,7 @@
 import logo from "../../assets/logo.svg";
 import "./Nav.scss";
 import { useEffect, useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 
 const Nav = () => {
@@ -123,9 +124,9 @@ const Nav = () => {
 
       <ul className="nav-list">
         <li id="link-1">
-          <a className="nav-link" href="#a">
+          <NavLink className="nav-link" to="aa">
             Home
-          </a>{" "}
+          </NavLink>{" "}
         </li>
         <li id="link-2">
           <a className="nav-link" href="#a">
