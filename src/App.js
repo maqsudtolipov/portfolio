@@ -12,7 +12,7 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Nav from "./components/Nav/Nav";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import Instagram from "./Pages/Instagram";
+import Spotify from "./Pages/Spotify";
 
 function App() {
   useEffect(() => {
@@ -123,7 +123,7 @@ function App() {
                 <Nav />
                 <Hero />
                 <Container>
-                  <Instagram />
+                  <Spotify />
                 </Container>
                 <Footer />
                 <Cursor />
@@ -136,7 +136,7 @@ function App() {
                 <>
                   <Nav />
                   <Container>
-                    <Instagram />
+                    <Spotify />
                   </Container>
                   <Footer />
                   <Cursor />

@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 import img1 from './../assets/spotify/spotify-1.png'
 
-const Instagram = () => {
+const Spotify = () => {
   return (
     <div className='page'>
         <div className="page__glow"></div>
@@ -90,4 +90,4 @@ const Instagram = () => {
   );
 };
 
-export default Instagram;
+export default Spotify;
