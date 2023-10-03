@@ -1,6 +1,79 @@
-.pg-heading-primary {
-  font-size: 5.4rem;
-  margin-bottom: 3.6rem;
+.page {
+  min-height: 100vh;
+  padding: 20rem 10vw;
+
+  &__glow {
+    width: 20rem;
+    height: 10rem;
+    background: #1DB954;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    filter: blur(200rem)
+  }
+
+  &__title {
+    margin-bottom: 3.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    svg {
+      font-size: 5.4rem;
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  a,
+  a:link,
+  a:visited {
+    //color: #1DB954;
+    color: inherit;
+  }
+
+  h1 {
+    font-size: 5.4rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -4rem;
+      top: -50%;
+      width: 12rem;
+      height: 12rem;
+      background: #1DB954;
+      border-radius: 50%;
+      filter: blur(5rem);
+      z-index: -1;
+    }
+  }
+
+  &__tags {
+    margin-bottom: 4.8rem;
+  }
+
+  &__tag {
+    display: inline-block;
+    font-size: 1.8rem;
+    list-style: none;
+    color: inherit;
+    padding: .4rem 1.2rem;
+  }
+
+  &__list {
+    font-size: 1.8rem;
+    padding-left: 2.4rem;
+
+    li {
+      margin-bottom: .8rem;
+    }
+  }
 }
 
 .pg-heading-secondary {

@@ -130,6 +130,19 @@ function App() {
               </>
             }
           ></Route>
+          <Route
+              path="/projects/spotify"
+              element={
+                <>
+                  <Nav />
+                  <Container>
+                    <Instagram />
+                  </Container>
+                  <Footer />
+                  <Cursor />
+                </>
+              }
+          ></Route>
         </Routes>
 
         {/* animation overlay */}

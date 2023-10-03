@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import './PortfolioProject.scss';
+import {Link} from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 const PortfolioProject = (props) => {
@@ -115,9 +116,9 @@ const PortfolioProject = (props) => {
 
   return (
     <div className='portfolio-project'>
-      <div className='portfolio-project__img' ref={imgRef}>
+      <Link to='/projects/spotify' className='portfolio-project__img' ref={imgRef}>
         <img ref={imgInRef} src={props.img} alt='' />
-      </div>
+      </Link>
 
       <div className='portfolio-project__content'>
         <h2 ref={titleRef}>{props.title}</h2>

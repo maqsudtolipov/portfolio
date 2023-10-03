@@ -5,8 +5,8 @@ import PortfolioProject from './PortfolioProject';
 
 const projects = [
   {
-    title: 'Instagram Clone',
-    img: 'https://images.unsplash.com/photo-1634118931958-f1cf1f9c6156?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80',
+    title: 'Spotify Clone',
+    img: 'https://images.unsplash.com/photo-1661949734732-7a845100959e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2506&q=80',
     description: 'Full Stack',
   },
   {
