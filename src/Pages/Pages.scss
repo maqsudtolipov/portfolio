@@ -3,13 +3,14 @@
   padding: 20rem 10vw;
 
   &__glow {
+    background: #1db954;
+    filter: blur(200rem);
+
     width: 20rem;
     height: 10rem;
-    background: #1DB954;
     position: absolute;
     bottom: 0;
     right: 0;
-    filter: blur(200rem)
   }
 
   &__title {
@@ -20,108 +21,101 @@
     justify-content: space-between;
 
     svg {
-      font-size: 5.4rem;
+      font-size: 4rem;
+      margin-left: 2rem;
     }
   }
 
   img {
-    width: 100%;
     border-radius: 6px;
+
+    width: 100%;
   }
 
   a,
   a:link,
   a:visited {
-    //color: #1DB954;
     color: inherit;
   }
 
   h1 {
     font-size: 5.4rem;
+
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
+      background: #1db954;
+      border-radius: 50%;
+      filter: blur(5rem);
+
+      width: 12rem;
+      height: 12rem;
       position: absolute;
       left: -4rem;
       top: -50%;
-      width: 12rem;
-      height: 12rem;
-      background: #1DB954;
-      border-radius: 50%;
-      filter: blur(5rem);
       z-index: -1;
     }
   }
 
+  h2 {
+    font-size: 4.8rem;
+
+    margin-bottom: 1.6rem;
+    margin-top: 2.4rem;
+  }
+
+  h3 {
+    font-size: 3.6rem;
+
+    margin-bottom: 1.6rem;
+    margin-top: 2.4rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+
+    margin-bottom: 0.8rem;
+  }
+
   &__tags {
-    margin-bottom: 4.8rem;
+    //margin-bottom: 4.8rem;
   }
 
   &__tag {
-    display: inline-block;
     font-size: 1.8rem;
-    list-style: none;
     color: inherit;
-    padding: .4rem 1.2rem;
+    list-style: none;
+
+    padding: 0.4rem 1.2rem;
+
+    display: inline-block;
   }
 
   &__list {
     font-size: 1.8rem;
+
     padding-left: 2.4rem;
 
     li {
-      margin-bottom: .8rem;
+      margin-bottom: 0.8rem;
     }
   }
-}
 
-.pg-heading-secondary {
-  font-size: 4.8rem;
-  margin-bottom: 2.4rem;
-}
-
-  .pg-heading-tertiary {
-    font-size: 3.6rem;
-    margin-bottom: 2.4rem;
+  .bold {
+    font-weight: 700;
   }
 
-.pg-paragraph {
-  font-size: 1.8rem;
-  line-height: 1.5;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 2.4rem;
-}
-
-.pg-bold {
-  font-weight: 700;
-
-  &::after {
-    content: " "
+  .italic {
+    font-style: italic;
   }
-}
 
-.pg-italic {
-  font-style: italic;
-
-  &::after {
-    content: " "
-  }
-}
-
-.pg-img {
-  width: 100%;
-  margin-bottom: 2.4rem;
-  box-shadow: 0 4rem 8rem #000;
-}
-
-.pg-gallery-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.6rem;
-  box-shadow: 0 4rem 8rem #000;
-
-  .pg-img {
-    box-shadow: none;
+  &__gallery-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+    box-shadow: 0 4rem 8rem #000;
   }
 }

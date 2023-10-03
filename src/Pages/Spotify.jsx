@@ -11,7 +11,7 @@ const Spotify = () => {
     <div className="page">
       <div className="page__glow"></div>
       <div className="page__title">
-        <h1 className="pg-heading-primary">Spotify Clone</h1>
+        <h1>Spotify Clone</h1>
         <div className="page__title-icons">
           <Link to="https://github.com/maqsudtolipov/spotify-clone">
             <IoLogoGithub />
@@ -49,10 +49,8 @@ const Spotify = () => {
         </li>
       </ul>
 
-      <h2 className="pg-heading-secondary">Project Features</h2>
-      <p className="pg-paragraph">
-        Here're some of the project's best features:
-      </p>
+      <h2>Project Features</h2>
+      <p>Here're some of the project's best features:</p>
       <ul className="page__list">
         <li>User authentication and authorization</li>
         <li>Search functionality to find songs playlists and artists</li>
@@ -63,14 +61,14 @@ const Spotify = () => {
         <li>Control player with MacBook Pro touch bar</li>
       </ul>
 
-      <h2 className="pg-heading-secondary">Screenshots</h2>
+      <h2>Screenshots</h2>
       <div className="pg-gallery-2">
         <img className="pg-img" src={img2} />
         <img className="pg-img" src={img3} />
       </div>
 
-      <h2 className="pg-heading-secondary">Experience</h2>
-      <p className="pg-paragraph">
+      <h2>Experience</h2>
+      <p>
         I recently completed my first full-stack project, which I started after
         finishing the NodeJS course by Jonas Schmedtmann. It took me four months
         to complete, with breaks for studying during the summer. Throughout this
