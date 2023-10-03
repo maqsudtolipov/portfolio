@@ -1,9 +1,10 @@
-import { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import './PortfolioProject.scss';
-import {Link} from "react-router-dom";
+import "./PortfolioProject.scss";
+import { Link } from "react-router-dom";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const PortfolioProject = (props) => {
@@ -16,13 +17,13 @@ const PortfolioProject = (props) => {
 
   useEffect(() => {
     if (imgRef === null) return;
-    const cursor = document.querySelector('.cursor');
+    const cursor = document.querySelector(".cursor");
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: imgRef.current,
-        toggleActions: 'play none none none',
-        start: 'top bottom-=100px',
-        end: 'bottom top+=100px',
+        toggleActions: "play none none none",
+        start: "top bottom-=100px",
+        end: "bottom top+=100px",
       },
     });
     // anmate image
@@ -30,23 +31,23 @@ const PortfolioProject = (props) => {
     tl.fromTo(
       imgRef.current,
       {
-        x: props.id % 2 === 0 ? '-20%' : '20%',
+        x: props.id % 2 === 0 ? "-20%" : "20%",
         opacity: 0,
         duration: 2,
       },
       {
         x: 0,
         opacity: 1,
-      }
+      },
     );
 
     // parallax effect on img
     const tlIn = gsap.timeline({
       scrollTrigger: {
         trigger: imgInRef.current,
-        toggleActions: 'play none reverse none',
-        start: 'top bottom-=200px',
-        end: 'bottom top+=100px',
+        toggleActions: "play none reverse none",
+        start: "top bottom-=200px",
+        end: "bottom top+=100px",
         scrub: true,
       },
     });
@@ -56,23 +57,24 @@ const PortfolioProject = (props) => {
       {
         scrollTrigger: {
           trigger: imgInRef.current,
-          toggleActions: 'play none none none',
-          start: 'top bottom-=100px',
+          toggleActions: "play none reverse none",
+          start: "top bottom-=200px",
+          end: "bottom top+=100px",
         },
         scale: 1,
       },
       {
-        scale: 1.1,
-      }
+        scale: 1.25,
+      },
     );
 
     // animate texts
     const tlTitle = gsap.timeline({
       scrollTrigger: {
         trigger: titleRef.current,
-        toggleActions: 'play none none none',
-        start: 'top bottom-=100px',
-        end: 'bottom top+=100px',
+        toggleActions: "play none none none",
+        start: "top bottom-=100px",
+        end: "bottom top+=100px",
       },
     });
 
@@ -80,49 +82,49 @@ const PortfolioProject = (props) => {
       .fromTo(
         titleRef.current,
         {
-          x: props.id % 2 === 0 ? '-50%' : '50%',
+          x: props.id % 2 === 0 ? "-50%" : "50%",
           opacity: 0,
-          letterSpacing: '2rem',
+          letterSpacing: "2rem",
           duration: 1,
         },
         {
           x: 0,
           opacity: 1,
-          letterSpacing: '0',
-        }
+          letterSpacing: "0",
+        },
       )
       .fromTo(
         desRef.current,
         {
           opacity: 0,
-          y: '-50%',
+          y: "-50%",
         },
         {
           opacity: 1,
-          y: '0%',
-        }
+          y: "0%",
+        },
       );
 
     // animate cursor
-    imgRef.current.addEventListener('mouseover', () => {
-      cursor.innerHTML = 'View project';
-      cursor.classList.add('c-project');
+    imgRef.current.addEventListener("mouseover", () => {
+      cursor.innerHTML = "View project";
+      cursor.classList.add("c-project");
     });
-    imgRef.current.addEventListener('mouseout', () => {
-      cursor.innerHTML = '';
-      cursor.classList.remove('c-project');
+    imgRef.current.addEventListener("mouseout", () => {
+      cursor.innerHTML = "";
+      cursor.classList.remove("c-project");
     });
   }, []);
 
   return (
-    <div className='portfolio-project'>
-      <Link to='/projects/spotify' className='portfolio-project__img' ref={imgRef}>
-        <img ref={imgInRef} src={props.img} alt='' />
+    <div className="portfolio-project">
+      <Link to={props.link} className="portfolio-project__img" ref={imgRef}>
+        <img ref={imgInRef} src={props.img} alt="" />
       </Link>
 
-      <div className='portfolio-project__content'>
+      <div className="portfolio-project__content">
         <h2 ref={titleRef}>{props.title}</h2>
-        <p ref={desRef}>{props.description}</p>{' '}
+        <p ref={desRef}>{props.description}</p>{" "}
       </div>
     </div>
   );

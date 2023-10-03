@@ -33,7 +33,7 @@ const Nav = () => {
         width: "25vw",
         opacity: 1,
       },
-      "<0%"
+      "<0%",
     );
     navTl.current.to(
       shapeRef3.current,
@@ -41,7 +41,7 @@ const Nav = () => {
         width: "25vw",
         opacity: 1,
       },
-      "<0%"
+      "<0%",
     );
     navTl.current.to(
       shapeRef4.current,
@@ -49,7 +49,7 @@ const Nav = () => {
         width: "25vw",
         opacity: 1,
       },
-      "<0%"
+      "<0%",
     );
 
     navTl.current.to(
@@ -58,7 +58,7 @@ const Nav = () => {
         x: 0,
         opacity: 1,
       },
-      "<100%"
+      "<100%",
     );
     navTl.current.to(
       "#link-2",
@@ -66,7 +66,7 @@ const Nav = () => {
         x: 0,
         opacity: 1,
       },
-      "<25%"
+      "<25%",
     );
     navTl.current.to(
       "#link-3",
@@ -74,7 +74,7 @@ const Nav = () => {
         x: 0,
         opacity: 1,
       },
-      "<25%"
+      "<25%",
     );
     navTl.current.to(
       "#link-4",
@@ -82,11 +82,9 @@ const Nav = () => {
         x: 0,
         opacity: 1,
       },
-      "<25%"
+      "<25%",
     );
   }, []);
-
-  console.log(open);
 
   return (
     <>

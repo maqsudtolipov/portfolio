@@ -2,6 +2,16 @@
   min-height: 100vh;
   padding: 20rem 10vw;
 
+  &--instagram {
+    .page__glow {
+      background: #E1306C;
+    }
+
+    h1::before {
+      background: #E1306C !important;
+    }
+  }
+
   &__glow {
     background: #1db954;
     filter: blur(200rem);

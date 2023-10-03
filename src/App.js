@@ -13,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import Nav from "./components/Nav/Nav";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Spotify from "./Pages/Spotify";
+import Instagram from "./Pages/Instagram";
 
 function App() {
   useEffect(() => {
@@ -33,7 +34,7 @@ function App() {
       {
         width: 0,
       },
-      "<0%"
+      "<0%",
     );
 
     tl.to(
@@ -41,7 +42,7 @@ function App() {
       {
         width: 0,
       },
-      "<0%"
+      "<0%",
     );
 
     tl.to(
@@ -49,7 +50,7 @@ function App() {
       {
         width: 0,
       },
-      "<0%"
+      "<0%",
     );
 
     tl.to(".overlay", {
@@ -60,33 +61,33 @@ function App() {
 
     buttons.forEach((button) => {
       button.addEventListener("mouseover", () =>
-        cursor.classList.add("c-none")
+        cursor.classList.add("c-none"),
       );
       button.addEventListener("mouseout", () =>
-        cursor.classList.remove("c-none")
+        cursor.classList.remove("c-none"),
       );
     });
 
     inputs.forEach((input) => {
       input.addEventListener("mouseover", () => cursor.classList.add("c-none"));
       input.addEventListener("mouseout", () =>
-        cursor.classList.remove("c-none")
+        cursor.classList.remove("c-none"),
       );
     });
 
     textareas.forEach((textarea) => {
       textarea.addEventListener("mouseover", () =>
-        cursor.classList.add("c-none")
+        cursor.classList.add("c-none"),
       );
       textarea.addEventListener("mouseout", () =>
-        cursor.classList.remove("c-none")
+        cursor.classList.remove("c-none"),
       );
     });
 
     footerLinks.forEach((link) => {
       link.addEventListener("mouseover", () => cursor.classList.add("c-none"));
       link.addEventListener("mouseout", () =>
-        cursor.classList.remove("c-none")
+        cursor.classList.remove("c-none"),
       );
     });
   }, []);
@@ -131,17 +132,30 @@ function App() {
             }
           ></Route>
           <Route
-              path="/projects/spotify"
-              element={
-                <>
-                  <Nav />
-                  <Container>
-                    <Spotify />
-                  </Container>
-                  <Footer />
-                  <Cursor />
-                </>
-              }
+            path="/projects/spotify"
+            element={
+              <>
+                <Nav />
+                <Container>
+                  <Spotify />
+                </Container>
+                <Footer />
+                <Cursor />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/projects/instagram"
+            element={
+              <>
+                <Nav />
+                <Container>
+                  <Instagram />
+                </Container>
+                <Footer />
+                <Cursor />
+              </>
+            }
           ></Route>
         </Routes>
 
